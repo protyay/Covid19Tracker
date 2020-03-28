@@ -1,2 +1,2 @@
-# JSProjects
-A list of small projects created as part of completion of Modern Javascript course by Brad Traversy
+# Covid19 Tracker for India
+A small dashboard for monitoring of the situation of Covid19 affected people in India.
