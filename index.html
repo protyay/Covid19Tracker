@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style\custom.css">
+	<title>Covid19 Weather</title>
+</head>
+<body class="">
+<nav class="navbar navbar-light bg-light">
+	<div class="container">
+		<a class="navbar-brand">Covid19 <span class="text-info">India</span></a>
+	</div>
+</nav>
+<div class="container mb-3">
+	<div class="row mt-5">
+		<div class="col-md-3 mb-sm-2">
+			<div class="card text-center">
+				<div class="card-body">
+					<h5 class="card-title text-secondary custom-cursive-font">Confirmed Cases</h5>
+					<p class="card-text"></p>
+					
+					<p class="text-warning font-weight-bolder double-font-size" id="confirmed-count"></p>
+				</div>
+				<div class="card-footer text-muted border-warning">
+					<span class="card-subtitle text-info font-weight-bolder" id="confirmed-delta"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 mb-sm-2">
+		<div class="card text-center">
+			<div class="card-body">
+				<h5 class="card-title text-secondary custom-cursive-font">Recovered Cases</h5>
+				<p class="card-text"></p>
+				
+				<p class="text-success font-weight-bolder double-font-size" id="recovery-count"></p>
+			</div>
+			<div class="card-footer text-muted border-success">
+					<span class="card-subtitle text-info font-weight-bolder"  id="recovered-delta">NA
+					</span>
+			</div>
+		</div>
+	</div>
+		<div class="col-md-3 mb-sm-2">
+			<div class="card text-center">
+				<div class="card-body">
+					<h5 class="card-title text-secondary custom-cursive-font">Active Cases</h5>
+					<p class="card-text"></p>
+					
+					<p class="text-info font-weight-bolder double-font-size" id="active-count"></p>
+				</div>
+				<div class="card-footer text-muted border-success">
+					<span class="card-subtitle text-info font-weight-bolder" id="active-delta">NA
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 mb-sm-2">
+			<div class="card text-center">
+				<div class="card-body">
+					<h5 class="card-title text-secondary custom-cursive-font">Deaths</h5>
+					<p class="card-text"></p>
+					<p class="text-danger font-weight-bolder double-font-size" id="death-count"></p>
+				</div>
+				<div class="card-footer text-muted border-danger">
+					<span class="card-subtitle text-info font-weight-bolder" id="death-delta"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-md-12">
+		<canvas id="state-covid19-stats">
+		
+		</canvas>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="state-covid-chart.js"></script>
+<script src="covid19-api.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
