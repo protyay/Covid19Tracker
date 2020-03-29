@@ -38,6 +38,7 @@ function getChartData() {
     // eslint-disable-next-line no-undef,no-unused-vars
     const chart = new Chart(stateWiseDiv, {
       type: 'bar',
+      responsive: true,
       data: {
         labels: stateNamesList,
         datasets: [{
@@ -47,7 +48,6 @@ function getChartData() {
           borderColor: 'rgb(255, 99, 232)',
         }],
       },
-
       options: {},
     });
   }).catch((error) => console.log(error));
