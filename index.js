@@ -32,13 +32,15 @@ function getChartData() {
 
     activeCaseCount.innerText = covid19StateData.totalActiveCases;
 
-    const stateNamesList = covid19StateData.statList.map((value) => value.stateName);
-    const confirmedCaseForStates = covid19StateData.statList.map((value) => value.confirmedCase);
+    const stateNamesList = covid19StateData.statList.filter(value => value.confirmedCase > 2).map((value) => value.stateName);
+    const confirmedCaseForStates = covid19StateData.statList
+                                                  .filter(value => value.confirmedCase > 2)
+                                                  .map(value => value.confirmedCase);
 
     // eslint-disable-next-line no-undef,no-unused-vars
     const chart = new Chart(stateWiseDiv, {
       type: 'bar',
-      responsive: true,
+
       data: {
         labels: stateNamesList,
         datasets: [{
@@ -48,7 +50,15 @@ function getChartData() {
           borderColor: 'rgb(255, 99, 232)',
         }],
       },
-      options: {},
+      options: {
+        responsive: true,
+        scales: {
+          xAxes: [{
+            categoryPercentage: 0.3,
+            barPercentage: 0.6,
+          }]
+        }
+      },
     });
   }).catch((error) => console.log(error));
 }
