@@ -4,7 +4,5 @@
 .custom-cursive-font {
     font-family: CURSIVE;
     font-style: italic;
-}
-.bg-teal {
-   background-color:  #3D9970
+    font-weight: bold;
 }
